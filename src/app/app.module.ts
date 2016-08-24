@@ -25,6 +25,7 @@ import { MdSlideToggleModule } from '@angular2-material/slide-toggle'
 import { MdTabsModule } from '@angular2-material/tabs'
 import { MdToolbarModule } from '@angular2-material/toolbar'
 import { MdTooltipModule } from '@angular2-material/tooltip'
+import { MdInputModule } from '@angular2-material/input'
 
 @NgModule({
   imports: [
@@ -46,7 +47,8 @@ import { MdTooltipModule } from '@angular2-material/tooltip'
     MdSlideToggleModule,
     MdTabsModule,
     MdToolbarModule,
-    MdTooltipModule
+    MdTooltipModule,
+    MdInputModule
   ],
   declarations: [
     AppComponent,
