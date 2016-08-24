@@ -7,11 +7,40 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material' : 'vendor/@angular2-material',
+  'angular2-cookie' : 'vendor/angular2-cookie'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-cookie' : { main: 'core.js', defaultExtension: 'js'}
 };
+
+const materialPkgs: string[] = [
+  'core',
+  'button',
+  'card',
+  'button-toggle',
+  'checkbox',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'menu',
+  'progress-bar',
+  'progress-circle',
+  'radio',
+  'sidenav',
+  'slider',
+  'slide-toggle',
+  'tabs',
+  'toolbar',
+  'tooltip'
+]
+
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
