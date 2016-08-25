@@ -1,8 +1,17 @@
 .login-container {
   display: flex;
   flex-flow: column nowrap;
+  align-content: center;
 }
 
 md-card {
-  width: 350px;
+  width: 300px;
+}
+
+md-input {
+  width: 150px;
+}
+
+.center {
+  align-items: center;
 }

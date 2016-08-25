@@ -26,11 +26,16 @@ import { MdTabsModule } from '@angular2-material/tabs'
 import { MdToolbarModule } from '@angular2-material/toolbar'
 import { MdTooltipModule } from '@angular2-material/tooltip'
 import { MdInputModule } from '@angular2-material/input'
+import { FormsModule } from '@angular/forms';
+import { CookieService } from 'angular2-cookie/core'
+import { LoginModule } from './login/login.module'
 
 @NgModule({
   imports: [
     BrowserModule,
     routing,
+    FormsModule,
+    //LoginModule,
     MdCardModule,
     MdButtonModule,
     MdButtonToggleModule,
@@ -60,7 +65,8 @@ import { MdInputModule } from '@angular2-material/input'
   ],
   providers: [
     appRoutingProviders,
-    LoginService
+    LoginService,
+    CookieService
   ],
   bootstrap: [ AppComponent ]
 })

@@ -9,7 +9,19 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent {
 
+  btnEnable: boolean = true
+  usuario: string = ""
+  password: string = ""
+
   constructor(private loginService : LoginService, private router: Router) {}
+
+  onChange() {
+    if(this.usuario !== "" && this.password !== "") {
+      this.btnEnable = false
+    } else {
+      this.btnEnable = true
+    }
+  }
 
   doLogin() {
     this.loginService.validate()
