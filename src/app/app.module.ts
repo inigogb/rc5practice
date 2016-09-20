@@ -35,7 +35,7 @@ import { LoginModule } from './login/login.module'
     BrowserModule,
     routing,
     FormsModule,
-    //LoginModule,
+    LoginModule,
     MdCardModule,
     MdButtonModule,
     MdButtonToggleModule,
@@ -57,9 +57,6 @@ import { LoginModule } from './login/login.module'
   ],
   declarations: [
     AppComponent,
-    LoginComponent,
-    SeleccionarEmpresaComponent,
-    SeleccionarModuloComponent,
     PageNotFoundComponent,
     MenuComponent
   ],

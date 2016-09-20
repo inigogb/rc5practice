@@ -1,14 +1,12 @@
 import { RouterModule, Routes } from '@angular/router'
 import { LoginParentComponent } from './components/login-parent.component'
 import { LoginComponent } from './components/login.component'
+import { LoginService } from './services/login.service'
 import { SeleccionarEmpresaComponent } from './components/seleccionar-empresa.component'
 import { SeleccionarModuloComponent } from './components/seleccionar-modulo.component'
 import { LoginGuard } from './login.guard'
 
 export const loginRoutes: Routes = [
-  {
-    path: 
-  },
   {
     path: 'login',
     component: LoginParentComponent,
@@ -18,6 +16,11 @@ export const loginRoutes: Routes = [
       { path: 'seleccionar-modulo', component: SeleccionarModuloComponent, canActivate: [LoginGuard] }
     ]
   }
+]
+
+export const authProviders = [
+  LoginGuard,
+  LoginService
 ]
 
 export const loginRouting = RouterModule.forChild(loginRoutes)

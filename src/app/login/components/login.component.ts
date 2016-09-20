@@ -26,7 +26,7 @@ export class LoginComponent {
   doLogin() {
     this.loginService.validate()
     if(this.loginService.isValidated) {
-      this.router.navigate(['/seleccionar-empresa'])
+      this.router.navigate(['login', 'seleccionar-empresa'])
     }
   }
 }

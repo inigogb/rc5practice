@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router'
 import { LoginService } from './login/services/login.service'
 
@@ -8,15 +8,9 @@ import { LoginService } from './login/services/login.service'
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'app works!';
 
   constructor(private router: Router, private loginService: LoginService) {}
-
-  ngOnInit() {
-    if(!this.loginService.isLoggedIn) {
-      this.router.navigate(['/login'])
-    }
-  }
 
 }

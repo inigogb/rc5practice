@@ -1,2 +1,22 @@
 <h1>Menu</h1>
+<div class="homeContainer">
+  <md-sidenav-layout>
+    <md-sidenav #start mode="side">
+      <md-card *ngFor="let menu of menuOptions" (click)="option(menu)">
+        {{menu.name}}
+      </md-card>
+    </md-sidenav>
+    <div class="upperSection">
+      <div>
+        <button (click)="openMenu(start)">Abrir menu</button>
+      </div>
+      <div *ngIf="isMenuActive" style="width: 100%">
+        <md-toolbar [color]="accent">
+          <span>My Application Title</span>
+        </md-toolbar>
+      </div>
+    </div>
+    My regular content. This will be moved into the proper DOM at runtime.
+  </md-sidenav-layout>
+</div>
 <button (click)="logout()" type="button" name="button">Salir</button>

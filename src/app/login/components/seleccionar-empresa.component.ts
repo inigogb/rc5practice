@@ -13,7 +13,7 @@ export class SeleccionarEmpresaComponent {
 
   selectEmpresa() {
     this.loginService.selectEmpresa()
-    this.router.navigate(['/seleccionar-modulo'])
+    this.router.navigate(['login', 'seleccionar-modulo'])
   }
 
   logout() {

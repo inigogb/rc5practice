@@ -1,0 +1,20 @@
+.homeContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 500px;
+  width: 100%;
+}
+
+md-sidenav {
+  width: 200px;
+}
+
+md-sidenav-layout {
+  width: 100%;
+}
+
+.upperSection {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
